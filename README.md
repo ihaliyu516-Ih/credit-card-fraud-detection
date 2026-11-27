@@ -23,7 +23,7 @@ Financial institutions lose money to fraudulent transactions, but fraud is only 
 
 ## 4. Dataset
 
-- **Source:** Provided by the programme mentor as a ZIP file containing `creditcard.csv`. *(Add the original source/citation here after confirming it.)*
+- **Source:** Provided by the programme mentor as a ZIP file containing `creditcard.csv`.
 - **Size:** 284,807 transactions, 31 columns.
 - **Columns:** `Time`, `V1`–`V28` (anonymised numeric features), `Amount`, `Class`.
 - **Target:** `Class` (0 = legitimate, 1 = fraud).
@@ -32,7 +32,7 @@ Financial institutions lose money to fraudulent transactions, but fraud is only 
 - **After removing duplicates:** 283,726 rows: 283,253 legitimate and 473 fraud (**0.167% fraud**).
 - The V1–V28 features are anonymised, so their individual meanings are not known.
 
-The dataset is **not** included in this repository because of its size. See `data/README.md` for how to obtain it.
+The dataset is **not** included in this repository because of its size (about 144 MB). It was provided by the programme mentor.
 
 ## 5. Technologies Used
 
@@ -114,16 +114,15 @@ Evaluation also included confusion matrices, ROC curves, precision-recall curves
 ## 11. How to Install and Run
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+# First clone this repository (use the green "Code" button on GitHub to copy its URL), then run:
 pip install -r requirements.txt
 ```
 
-1. Get the dataset (see `data/README.md`) and place `creditcard.csv` in the `data/` folder.
-2. Open `notebooks/Credit_Card_Fraud_Isa.ipynb` in Jupyter or Google Colab and run the cells in order. Update the data path if needed.
+1. Get `creditcard.csv` (ask the programme mentor for the dataset ZIP) and save it on your computer.
+2. Open `Credit_Card_Fraud_Isa.ipynb` in Jupyter or Google Colab and run the cells in order. Change the file path in the data-loading cell to where you saved `creditcard.csv`.
 3. Random Forest training takes several minutes (about 2.5 to 6.5 minutes per run in Colab).
 
-Saved files in `models/`: `preprocessor.joblib`, `xgboost_tuned.joblib`, `feature_order.json`, `best_params.json`, `final_results.csv`.
+The notebook trains all models from scratch. Trained model files are not included in this repository.
 
 ## 12. Limitations
 
